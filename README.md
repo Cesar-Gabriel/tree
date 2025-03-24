@@ -1,18 +1,21 @@
 # Tree
 
-This repository contains a project called "Tree" which is primarily built using HTML and CSS. This project aims to track and count the number of trees planted by various companies.
+This repository contains a project called "Tree" which is primarily built using HTML, CSS, Python, and JavaScript. This project aims to track and count the number of trees planted by various companies.
 
 ## Project Structure
 
-- **HTML (17.3%)**: The main structure and content of the web pages.
-- **CSS (5.8%)**: The styling and layout of the web pages.
-- **PYTHON (76.9)**: The tree counter.
+- **JavaScript (49.8%)**: Handles dynamic updates and interaction on the webpage.
+- **Python (37.4%)**: Manages the backend logic, including counting and storing tree data.
+- **HTML (9.2%)**: The main structure and content of the web pages.
+- **CSS (3.6%)**: The styling and layout of the web pages.
 
 ## Features
 
 - Track trees planted by different companies.
 - Display total trees planted.
 - Easy to navigate user interface.
+
+## Getting Started
 
 ### Prerequisites
 
@@ -23,7 +26,7 @@ This repository contains a project called "Tree" which is primarily built using 
 1. Clone the repository:
    ```bash
    git clone https://github.com/Cesar-Gabriel/tree.git
-
+   ```
 2. Navigate to the project directory:
    ```bash
    cd tree
@@ -32,7 +35,7 @@ This repository contains a project called "Tree" which is primarily built using 
 
 ### Usage
 
-1. To add a company and the number of trees they planted, update the relevant sections in the HTML file.
+1. To add a company and the number of trees they planted, update the relevant sections in the JSON file.
 2. The total number of trees planted can be viewed on the main page.
 
 ## Contributing
@@ -64,4 +67,4 @@ For any inquiries or feedback, please reach out to the repository owner at [Cesa
 
 ```
 
-You can save this content in a file named `README.md` in your repository. This will provide an overview and guide for users interacting with your project.
+This updated `README.md` file reflects the correct language composition of the repository and includes the role of each language in the project structure.
