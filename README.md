@@ -4,8 +4,9 @@ This repository contains a project called "Tree" which is primarily built using 
 
 ## Project Structure
 
-- **HTML (74.9%)**: The main structure and content of the web pages.
-- **CSS (25.1%)**: The styling and layout of the web pages.
+- **HTML (17.3%)**: The main structure and content of the web pages.
+- **CSS (5.8%)**: The styling and layout of the web pages.
+- **PYTHON (76.9)**: The tree counter.
 
 ## Features
 
