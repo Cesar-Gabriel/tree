@@ -34,5 +34,49 @@ async function updateCounter() {
     document.getElementById('tree-counter').textContent = totalTrees;
 }
 
+// Function to add trees planted by a company
+async function addCompanyTrees(event) {
+    event.preventDefault();
+    const companyName = document.getElementById('company-name').value;
+    const treesCount = parseInt(document.getElementById('trees-count').value);
+
+    if (!companyName || isNaN(treesCount) || treesCount <= 0) {
+        alert('Please enter valid company name and number of trees.');
+        return;
+    }
+
+    let treeData = await loadTreeData();
+    if (companyName in treeData) {
+        treeData[companyName] += treesCount;
+    } else {
+        treeData[companyName] = treesCount;
+    }
+
+    saveTreeData(treeData);
+    updateCounter();
+    document.getElementById('tree-form').reset();
+}
+
+// Function to save the tree data to a JSON file
+function saveTreeData(data) {
+    fetch('tree_data.json', {
+        method: 'POST', // or 'PUT'
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+}
+
+// Event listener for form submission
+document.getElementById('tree-form').addEventListener('submit', addCompanyTrees);
+
 // Call the function to update the counter when the page loads
 window.onload = updateCounter;
