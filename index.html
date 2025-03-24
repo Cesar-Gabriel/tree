@@ -1,23 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tree Counter</title>
+    <title>Tree Tracker</title>
 </head>
 <body>
-    <h1>Total Trees Planted: <span id="tree-counter">0</span></h1>
+    <h1>Total Trees Planted Worldwide: <span id="tree-counter">0</span></h1>
 
-    <script>
-        // Update the counter dynamically if using JavaScript
-        function updateCounter() {
-            fetch('/path/to/tree_counter.py')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('tree-counter').textContent = data.total_trees;
-                });
-        }
-
-        // Call the function to update the counter
-        updateCounter();
-    </script>
+    <script src="tree_tracker.js"></script>
 </body>
 </html>
