@@ -1,10 +1,23 @@
-<!DOCTYPE HTML>
-<html> 
-    <link rel="stylesheet" href="style.css" />
+<!DOCTYPE html>
+<html>
 <head>
-    <title>Tree, a non official github project</title>
+    <title>Tree Counter</title>
 </head>
 <body>
-  <h1>Tree, a non official GITHUB project to count planted trees every 10 minutes</h1>
+    <h1>Total Trees Planted: <span id="tree-counter">0</span></h1>
+
+    <script>
+        // Update the counter dynamically if using JavaScript
+        function updateCounter() {
+            fetch('/path/to/tree_counter.py')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('tree-counter').textContent = data.total_trees;
+                });
+        }
+
+        // Call the function to update the counter
+        updateCounter();
+    </script>
 </body>
 </html>
